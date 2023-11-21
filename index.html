@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listes de Joueurs</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="vendor.bundle.base.css">
+</head>
+<body>
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card" id="card">
+        <div class="card-body">
+            <h2 class="card-title">2023-2024 SAISON STATS</h2>
+            <p class="card-description">
+                Statistique <code>.joueur</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="titre">
+                    <tr>
+                        <th class="titre">
+                            Classement
+                        </th>
+        
+                        <th>
+                            Nom
+                        </th>
+                        <th>
+                            Equipe
+                        </th>
+                        <th>
+                            M
+                        </th>
+                        <th>
+                            M.J
+                        </th>
+                        <th>
+                            PPM
+                        </th>
+                        <th>
+                            RPM
+                        </th>
+                        <th>
+                            PDPM
+                        </th>
+                        <th>
+                            MPM
+                        </th>
+                        <th>
+                            EFF
+                        </th>
+                        <th>
+                            FG
+                        </th>
+                        <th>
+                            LF
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody id="playerLists">
+                    <!-- Les données des joueurs seront ajoutées ici dynamiquement -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+<script>
+    Parse.initialize("2aDfp0sZXaFJxVs1rp4W1IJB98aXzyDN4pT5TI5j", "6aaXGao0MjGxxo3m5GunnetuzndjFMiDGaElLqhz");
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+    async function getAllPlayerLists() {
+        try {
+            const response = await Parse.Cloud.run("getStatistique");
+            displayPlayerLists(response);
+        } catch (error) {
+            console.error("Erreur lors de la récupération des listes de joueurs :", error.message);
+        }
+    }
+
+    function displayPlayerLists(playerLists) {
+        const playerListsContainer = document.getElementById("playerLists");
+
+        playerLists.forEach((player, index) => {
+            const row = document.createElement("tr");
+
+            // Ajouter le code pour extraire les propriétés du joueur
+            const classementCell = document.createElement("td");
+            classementCell.textContent = index + 1;
+            row.appendChild(classementCell);
+
+            const nomCell = document.createElement("td");
+            nomCell.textContent = player.get("joueur");
+            row.appendChild(nomCell);
+
+            const equipeCell = document.createElement("td");
+            equipeCell.textContent = player.get("equipe");
+            row.appendChild(equipeCell);
+
+            const matchCell = document.createElement("td");
+            matchCell.textContent = player.get("m");
+            row.appendChild(matchCell);
+
+            const mjCell = document.createElement("td");
+            mjCell.textContent = player.get("mj");
+            row.appendChild(mjCell);
+
+
+            const ppmCell = document.createElement("td");
+            ppmCell.textContent = player.get("ppm");
+            row.appendChild(ppmCell);
+
+            const rpmCell = document.createElement("td");
+            rpmCell.textContent = player.get("rpm");
+            row.appendChild(rpmCell);
+
+            const pdpmCell = document.createElement("td");
+            pdpmCell.textContent = player.get("pdpm");
+            row.appendChild(pdpmCell);
+
+            const mpmCell = document.createElement("td");
+            mpmCell.textContent = player.get("mpm");
+            row.appendChild(mpmCell);
+
+            const effCell = document.createElement("td");
+            effCell.textContent = player.get("eff");
+            row.appendChild(effCell);
+
+            const fgCell = document.createElement("td");
+            fgCell.textContent = player.get("fg");
+            row.appendChild(fgCell);
+
+            const lfCell = document.createElement("td");
+            lfCell.textContent = player.get("lf");
+            row.appendChild(lfCell);
+
+            // Ajoutez d'autres cellules en fonction de vos propriétés
+
+            playerListsContainer.appendChild(row);
+            });
+    }
+
+    // Appel de la fonction au chargement de la page
+    getAllPlayerLists();
+</script>
+
+</body>
+</html>

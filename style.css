@@ -1,0 +1,487 @@
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-linkk {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav-linkk:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.nav-linkk:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-linkk:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+th {
+  background-color: #007bff;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+label { /*espace entre les lignes dans le tableau 1*/
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.table, .jsgrid .jsgrid-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.table th, .jsgrid .jsgrid-table th,
+.table td,
+.jsgrid .jsgrid-table td {
+  padding: 1.125rem 1.375rem;
+  vertical-align: top;
+  border-top: 1px solid #CED4DA;
+}
+
+.table thead th, .jsgrid .jsgrid-table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #CED4DA;
+  background-color: #417bb9;
+  color: white;
+}
+
+.table tbody + tbody, .jsgrid .jsgrid-table tbody + tbody {
+  border-top: 2px solid #CED4DA;
+}
+
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #F5F7FF;
+}
+
+.table-hover tbody tr:hover {
+  color: #212529;
+  background-color: #b1b1bd;
+}
+
+/*------------------------------IMPORTANT-----------------------------------------------------*/
+
+/*------------------------------IMPORTANT-----------------------------------------------------*/
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-linkk {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+}
+
+#card{
+  margin-top: 3%;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+/*------------------------------------------BUTTON STATUS---------------------------------------------*/
+.badge-success, .preview-list .preview-item .preview-thumbnail .badge.badge-online {
+  color: #fff;
+  background-color: #57B657;
+}
+
+.badge-info, .preview-list .preview-item .preview-thumbnail .badge.badge-offline {
+  color: #fff;
+  background-color: #248AFD;
+}
+
+.badge-warning, .preview-list .preview-item .preview-thumbnail .badge.badge-busy {
+  color: #212529;
+  background-color: #FFC100;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #FF4747;
+}
+
+/*------------------------------------------FIN BUTTON STATUS---------------------------------------------*/
+
+/*------------------------------IMPORTANT-----------------------------------------------------*/
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  line-height: 0;
+  font-size: 0.75rem;
+  background-color: #c6cacd;
+  border-radius: 0.25rem;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #007bff;
+  transition: width 0.6s ease;
+}
+
+/*------------------------------IMPORTANT-----------------------------------------------------*/
+
+.bg-success, .swal2-modal .swal2-buttonswrapper .swal2-styled.swal2-confirm, .settings-panel .color-tiles .tiles.success {
+  background-color: #57B657 !important;
+}
+
+.bg-info, .settings-panel .color-tiles .tiles.info {
+  background-color: #248AFD !important;
+}
+
+.bg-warning, .settings-panel .color-tiles .tiles.warning {
+  background-color: #FFC100 !important;
+}
+
+.bg-danger, .settings-panel .color-tiles .tiles.danger {
+  background-color: #FF4747 !important;
+}
+
+/* Typography */
+.container-scroller {
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: initial;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*-------------------------------------------BADGE---------------------------------------*/
+/* Badges */
+.badge {
+  border-radius: 20px;
+  font-size: 12px;
+  line-height: 1;
+  padding: .375rem .5625rem;
+  font-weight: normal;
+}
+
+.badge.badge-pill {
+  border-radius: 10rem;
+}
+
+/*Badge outlined variations*/
+.badge-outline-primary {
+  color: #4B49AC;
+  border: 1px solid #4B49AC;
+}
+
+.badge-outline-secondary {
+  color: #a3a4a5;
+  border: 1px solid #a3a4a5;
+}
+
+.badge-outline-success {
+  color: #57B657;
+  border: 1px solid #57B657;
+}
+
+.badge-outline-info {
+  color: #248AFD;
+  border: 1px solid #248AFD;
+}
+
+.badge-outline-warning {
+  color: #FFC100;
+  border: 1px solid #FFC100;
+}
+
+.badge-outline-danger {
+  color: #FF4747;
+  border: 1px solid #FF4747;
+}
+
+.badge-outline-light {
+  color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+}
+
+.badge-outline-dark {
+  color: #282f3a;
+  border: 1px solid #282f3a;
+}
+/*-------------------------------------------FIN BADGE---------------------------------------*/
+
+
+/*-------------------------------------------PROGRESS---------------------------------------*/
+
+/* Bootstrap Progress */
+.progress {
+  border-radius: 7px;
+  height: 8px;
+}
+
+.progress .progress-bar {
+  border-radius: 7px;
+  animation: barAnimation 4s ease-in-out;
+}
+
+@keyframes barAnimation {
+  0% { width: 0; }
+}
+
+
+.progress.progress-sm {
+  height: 0.375rem;
+}
+
+.progress.progress-md {
+  height: 11px;
+}
+
+.progress.progress-lg {
+  height: 15px;
+}
+
+.progress.progress-xl {
+  height: 18px;
+}
+/*-------------------------------------------FIN PROGRESS---------------------------------------*/
+
+/* Tables */
+.table thead th, .jsgrid .jsgrid-table thead th {
+  border-top: 0;
+  border-bottom-width: 1px;
+  font-weight: 600;
+  font-size: .875rem;
+}
+
+.table thead th i, .jsgrid .jsgrid-table thead th i {
+  margin-left: 0.325rem;
+}
+
+.table th, .jsgrid .jsgrid-table th,
+.table td,
+.jsgrid .jsgrid-table td {
+  vertical-align: middle;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+.table td,
+.jsgrid .jsgrid-table td {
+  font-size: 0.875rem;
+}
+
+.table td img, .jsgrid .jsgrid-table td img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.table td .badge, .jsgrid .jsgrid-table td .badge {
+  margin-bottom: 0;
+}
+
+.table.table-borderless, .jsgrid .table-borderless.jsgrid-table {
+  border: none;
+}
+
+/*-------------------------------------------IMPORTANT---------------------------------------*/
+/* Colcade */
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  border: 1px solid #aab2bd est;
+}
+
+/*------------------------------IMPORTANT-----------------------------------------------------*/
+
+.page-body-wrapper {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 60px;
+  position: sticky;
+}
+
+.page-body-wrapper.full-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 0;
+}
+
+.main-panel {
+  transition: width 0.25s ease, margin 0.25s ease;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .main-panel {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.content-wrapper {
+  background: #F5F7FF;
+  padding: 2.375rem 2.375rem;
+  width: 100%;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+  .content-wrapper {
+    padding: 1.5rem 1.5rem;
+  }
+}
+
+/*------------------------------IMPORTANT-----------------------------------------------------*/
+/*INPUT TYPE SELECT*/
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1%;
+}
+
+.select-container select {
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 30%;
+}
+
+.select-container select:hover {
+  background-color: #7ad074;
+}
+
+.select-container select:focus {
+  outline: none;
+  background-color: #d9d9d9;
+}
+
+.select-container select option {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.select-container select option:hover {
+  background-color: #7ad074;
+}
+
+/*BOUTON SUBMIT*/
+.magnifique-bouton {
+  /* Styles de base */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #39531e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.magnifique-bouton:before {
+  /* Animation de fond */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.magnifique-bouton:hover:before {
+  opacity: 1;
+  transform: scale(3);
+}
+
+.magnifique-bouton:after {
+  /* Animation de bordure */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ffffff;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.magnifique-bouton:hover:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.magnifique-bouton span {
+  /* Animation du texte */
+  position: relative;
+  transition: color 0.3s ease-out;
+}
+
+.magnifique-bouton:hover span {
+  color: #00ff44;
+}
+
+#graphe{
+  text-align: center;
+}
